@@ -1,6 +1,5 @@
-import sys
-import bin.syslib as sys
-import bin.storylib as story
+import lib.sys as s
+import lib.story as slib
 
 def main():
     # get name stored for later use.
@@ -10,9 +9,9 @@ def main():
     sheet = char_creation(name)
     
     # give the ending screen time to be fully read. 5 seconds default?
-    story.scs(sheet)
-    sys.sleep(5)
-    sys.clear()
+    slib.scs(sheet)
+    s.sleep(5)
+    s.clear()
 
 
 # get name for character
@@ -23,7 +22,7 @@ def char_naming():
 
 #create a character
 def char_creation(name):
-    points = story.dice(12)
+    points = slib.dice(12)
     
     #assign rolled points to character sheet loop till 0
     while points != 0:
@@ -37,7 +36,7 @@ def char_creation(name):
         print(f"Agility : {stat2start}")
         print(f"Intelligence : {stat3start}")
         print()
-        sys.sleep(5)
+        s.sleep(5)
         
         #may scrap this in favor of 6 side roll per stat.
         try:
@@ -49,7 +48,7 @@ def char_creation(name):
                 points = points + stat1
                 stat1 = stat1start
                 print(f"{points} points remian")
-                sys.sleep(2)
+                s.sleep(2)
             elif points == 0:
                 break
             
@@ -61,7 +60,7 @@ def char_creation(name):
                 points = points + stat2
                 stat2 = stat2start
                 print(f"{points} points remian")
-                sys.sleep(2)
+                s.sleep(2)
             elif points == 0:
                 break
             
@@ -73,7 +72,7 @@ def char_creation(name):
                 points = points + stat3
                 stat3 = stat3start
                 print(f"{points} points remian")
-                sys.sleep(2)
+                s.sleep(2)
             elif points == 0:
                 break
             
@@ -82,7 +81,7 @@ def char_creation(name):
         
         except ValueError:
             pass
-    sys.clear()
+    s.clear()
         
     #pass stats to sheet, and return them
     sheet = {'Name': name, 'STR': stat1, 'AGI': stat2,'INT': stat3}
