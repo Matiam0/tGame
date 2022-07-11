@@ -1,7 +1,8 @@
 # roll a dice with {a} number of sides
-def dice(a):
+def dice(sides):
     import random
-    random.randomint(1,a)
+    roll = random.randint(1, sides)
+    return roll
 
 #define choice with two options
 def choice2(c1, c2):
@@ -33,3 +34,7 @@ def choice4(c1, c2, c3, c4):
     else:
         c0 = 3
     return c0
+
+def scs(sheet):
+    for key, value in sheet.items():
+        print(key, ':', value)
