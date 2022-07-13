@@ -38,3 +38,18 @@ def choice4(c1, c2, c3, c4):
 def scs(sheet):
     for key, value in sheet.items():
         print(key, ':', value)
+
+def sedit(points,stat):
+    while points != 0:
+        print(f"You have {points} left.")
+        stat = points - int(input(f"How many points do you want to add to {stat}? "))
+        if points < 0:
+            print(f"{points} is an Invalide Point Value.")
+            rts.sleep(4) #ignore, start.py imports rtsystems rendering this error moot.
+            break
+        else:
+            stat = points
+            return stat
+    else:
+        stat = points
+        return stat
