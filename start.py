@@ -1,17 +1,17 @@
-import lib.sys as s
-import lib.story as slib
+import lib.rtsystems as rts
+import lib.rtstoryteller as rtst
 
 def main():
-    # get name stored for later use.
+    # get name stored for later use.s
     name = char_naming()
     
     # create character sheet
     sheet = char_creation(name)
     
     # give the ending screen time to be fully read. 5 seconds default?
-    slib.scs(sheet)
-    s.sleep(5)
-    s.clear()
+    rtst.scs(sheet)
+    rts.sleep(5)
+    rts.clear()
 
 
 # get name for character
@@ -22,7 +22,7 @@ def char_naming():
 
 #create a character
 def char_creation(name):
-    points = slib.dice(12)
+    points = rtst.dice(12)
     
     #assign rolled points to character sheet loop till 0
     while points != 0:
@@ -36,7 +36,7 @@ def char_creation(name):
         print(f"Agility : {stat2start}")
         print(f"Intelligence : {stat3start}")
         print()
-        s.sleep(5)
+        rts.sleep(5)
         
         #may scrap this in favor of 6 side roll per stat.
         try:
@@ -48,7 +48,7 @@ def char_creation(name):
                 points = points + stat1
                 stat1 = stat1start
                 print(f"{points} points remian")
-                s.sleep(2)
+                rts.sleep(2)
             elif points == 0:
                 break
             
@@ -60,7 +60,7 @@ def char_creation(name):
                 points = points + stat2
                 stat2 = stat2start
                 print(f"{points} points remian")
-                s.sleep(2)
+                rts.sleep(2)
             elif points == 0:
                 break
             
@@ -72,7 +72,7 @@ def char_creation(name):
                 points = points + stat3
                 stat3 = stat3start
                 print(f"{points} points remian")
-                s.sleep(2)
+                rts.sleep(2)
             elif points == 0:
                 break
             
@@ -81,7 +81,7 @@ def char_creation(name):
         
         except ValueError:
             pass
-    s.clear()
+    rts.clear()
         
     #pass stats to sheet, and return them
     sheet = {'Name': name, 'STR': stat1, 'AGI': stat2,'INT': stat3}
