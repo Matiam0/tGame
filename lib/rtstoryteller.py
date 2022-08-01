@@ -4,7 +4,7 @@ def dice(sides):
     roll = random.randint(1, sides)
     return roll
 
-#define choice with two options
+#define choice commands withoptions
 def choice2(c1, c2):
     in1 = input(f"{c1}, or {c2}? ")
     if in1 == c1:
@@ -34,18 +34,17 @@ def choice4(c1, c2, c3, c4):
     else:
         c0 = 3
     return c0
-
+#show character sheet
 def scs(sheet):
     for key, value in sheet.items():
         print(key, ':', value)
-
-def sedit(points,stat):
+#stat edit, to update stats. Needs points to add, stat to devine the string to use in text for stat, and current stat or cstat.
+def sedit(points,stat,cstat):
     while points != 0:
         print(f"You have {points} left.")
-        stat = points - int(input(f"How many points do you want to add to {stat}? "))
+        stat = cstat + points - int(input(f"How many points do you want to add to {stat}? "))
         if points < 0:
             print(f"{points} is an Invalide Point Value.")
-            rts.sleep(4) #ignore, start.py imports rtsystems rendering this error moot.
             break
         else:
             stat = points

@@ -23,13 +23,19 @@ def char_naming():
 #create a character
 def char_creation(name):
     
-    #assign rolled points to character sheet loop till 0
-    points = rtst.dice(6) + 3
-    stat1 = rtst.sedit(points, 'STR')
-    points = rtst.dice(6) + 3
-    stat2 = rtst.sedit(points, 'AGI')
-    points = rtst.dice(6) + 3
-    stat3 = rtst.sedit(points, 'INT')
+    #Roll points for stats with a basestat of 3
+    points = rtst.dice(6)
+    stat1 = rtst.sedit(points, 'STR', 3)
+    rts.sleep(3)
+    rts.clear()
+    points = rtst.dice(6)
+    stat2 = rtst.sedit(points, 'AGI', 3)
+    rts.sleep(3)
+    rts.clear()
+    points = rtst.dice(6)
+    stat3 = rtst.sedit(points, 'INT', 3)
+    rts.sleep(3)
+    rts.clear()
         
     #pass stats to sheet, and return them
     sheet = {'Name': name, 'STR': stat1, 'AGI': stat2,'INT': stat3}
