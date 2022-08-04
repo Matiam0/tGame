@@ -15,6 +15,7 @@ def main():
     
     #Intro text scroll?
     intro()
+    
 
 
 # get name for character
