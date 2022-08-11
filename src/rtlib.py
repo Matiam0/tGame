@@ -1,4 +1,26 @@
-# roll a dice with {a} number of sides
+# Use for System type commands that can be used in the lib later.
+# define easy to use clear screen that works on multiple os
+def clear():
+    import os
+    if(os.name =='posix'):
+        os.system('clear')
+    else:
+        os.system('cls')
+
+# define sleep as an easy to call function
+def sleep(n):
+    from time import sleep
+    sleep(n)
+
+#file loading
+def loadfile(file):
+    import json
+    f = open(file)
+    out = json.load(f)
+    return out
+
+#RPG defs/ non-system type.
+#Dice roller.
 def dice(sides):
     import random
     roll = random.randint(1, sides)
@@ -42,9 +64,8 @@ def scs(sheet):
     for key, value in sheet.items():
         print(key, ':', value)
 
-#stat edit, to update stats. Needs points to add, stat to devine the string to use in text for stat, and current stat or cstat.
+#Character sheet edit/stat edit.
 def sedit(name, points, stat1t, stat2t, stat3t, stat1, stat2, stat3):
-    from lib.rtsystems import clear
     while points > 0:
         clear()
         print(f"Hello you have {points} points  remaining.")
@@ -69,3 +90,6 @@ def sedit(name, points, stat1t, stat2t, stat3t, stat1, stat2, stat3):
             pass
     sheet = {'Name': name, stat1t: stat1, stat2t: stat2, stat3t: stat3}
     return sheet
+
+def ccreate():
+    print()
