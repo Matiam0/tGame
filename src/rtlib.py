@@ -11,6 +11,9 @@ def clear():
 def sleep(n):
     from time import sleep
     sleep(n)
+#fromfile
+def fromfile(file,key):
+    sleep(5)
 
 #file loading
 def loadfile(file):
