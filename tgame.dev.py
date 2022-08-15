@@ -9,7 +9,7 @@ def main():
     rt.sleep(5)
     
     #Character creation.
-    rt.ccreate()
-        
+    sheet = rt.ccreate()
+    
 
 main()
