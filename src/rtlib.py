@@ -95,4 +95,13 @@ def sedit(name, points, stat1t, stat2t, stat3t, stat1, stat2, stat3):
     return sheet
 
 def ccreate():
-    print()
+    print(Initializing Character creation.)
+    sleep(5)
+    clear()
+    print(Initializing Character creation..)
+    sleep(5)
+    clear
+    print(Initializing Character creation...)
+    sleep(5)
+    clear()
+    name = input("What is your name?")
