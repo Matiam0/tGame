@@ -11,9 +11,17 @@ def clear():
 def sleep(n):
     from time import sleep
     sleep(n)
-#fromfile
-def fromfile(file,key):
-    sleep(5)
+
+# print fromfile using key to get only the value to print.
+def fromfilevalue(file,key):
+    out = loadfile(file)
+    print(out.get(key))
+
+# print fromfile with key and value.
+def fromfilekeyvalue(file, key):
+    out = loadfile(file)
+    for key, value in out.items():
+        print(key, ':', value)
 
 #file loading
 def loadfile(file):
@@ -22,52 +30,52 @@ def loadfile(file):
     out = json.load(f)
     return out
 
-#RPG defs/ non-system type.
-#Dice roller.
+# rpg defs/ non-system type.
+# dice roller.
 def dice(sides):
     import random
     roll = random.randint(1, sides)
     return roll
 
-#2 choices
+# 2 choices
 def choice2(c1, c2):
     in1 = input(f"{c1}, or {c2}? ")
     if in1 == c1:
-        c0 = 1
+        c0 = c1
     else:
-        c0 = 2
+        c0 = c2
     return c0
 
-#3 choices
+# 3 choices
 def choice3(c1, c2, c3):
     in1 = input(f"{c1}, {c2}, or {c3}? ")
     if in1 == c1:
-        c0 = 1
+        c0 = c1
     elif in1 == c2:
-        c0 = 2
+        c0 = c2
     else:
-        c0 = 3
+        c0 = c3
     return c0
 
-#4 choices
+# 4 choices
 def choice4(c1, c2, c3, c4):
     in1 = input(f"{c1}, {c2}, {c3}, or {c4}? ")
     if in1 == c1:
-        c0 = 1
+        c0 = c1
     elif in1 == c2:
-        c0 = 2
+        c0 = c2
     elif in1 == c3:
-        c0 = 3
+        c0 = c3
     else:
-        c0 = 4
+        c0 = c4
     return c0
 
-#show character sheet
+# show character sheet
 def scs(sheet):
     for key, value in sheet.items():
         print(key, ':', value)
 
-#Character sheet edit/stat edit.
+# character sheet edit/stat edit.
 def sedit(name, points, stat1t, stat2t, stat3t, stat1, stat2, stat3):
     while points > 0:
         clear()
@@ -105,6 +113,7 @@ def ccreate():
     print("Initializing Character creation...")
     sleep(3)
     clear()
+    # initial / basic stats and starting level.
     stat1t = "STR"
     stat1 = 3
     stat2t = "INT"
