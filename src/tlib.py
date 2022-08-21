@@ -103,6 +103,7 @@ def sedit(name, points, stat1t, stat2t, stat3t, stat1, stat2, stat3):
     return sheet
 
 def ccreate():
+    # flare, useless code... may add a def for automating this and make it easier to comment out during testing.
     clear()
     print("Initializing Character creation.")
     sleep(3)
@@ -121,6 +122,7 @@ def ccreate():
     stat3t = "DEX"
     stat3 = 3
     level = 1
+    #  currently random gender, may make it a choice?
     roll = dice(2)
     if roll == 1:
         gender = "Male" 

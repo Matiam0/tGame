@@ -1,4 +1,4 @@
-import src.rtlib as rt
+import src.tlib as t
 import json
 
 def main():
@@ -6,22 +6,22 @@ def main():
     textlib = rt.loadfile("src/textlib.json")
     sleeptime = 3
     print(textlib.get('ocredit'))
-    rt.sleep(sleeptime)
+    t.sleep(sleeptime)
     print(textlib.get('ocredit-1'))
-    rt.sleep(sleeptime)
+    t.sleep(sleeptime)
     print(textlib.get('ocredit-2'))
-    rt.sleep(sleeptime)
+    t.sleep(sleeptime)
     print(textlib.get('ocredit-3'))
-    rt.sleep(sleeptime)
+    t.sleep(sleeptime)
     print(textlib.get('ocredit-4'))
-    rt.sleep(sleeptime)
+    t.sleep(sleeptime)
     
     #Character creation.
-    rt.clear()
+    t.clear()
     sheet = rt.ccreate()
-    rt.clear()
-    rt.scs(sheet)
-    rt.sleep(5)
+    t.clear()
+    t.scs(sheet)
+    t.sleep(5)
     
 
 main()
