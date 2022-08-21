@@ -3,7 +3,7 @@ import json
 
 def main():
     #credits/opening text from file.
-    textlib = rt.loadfile("src/textlib.json")
+    textlib = t.loadfile("src/textlib.json")
     sleeptime = 3
     print(textlib.get('ocredit'))
     t.sleep(sleeptime)
@@ -18,7 +18,7 @@ def main():
     
     #Character creation.
     t.clear()
-    sheet = rt.ccreate()
+    sheet = t.ccreate()
     t.clear()
     t.scs(sheet)
     t.sleep(5)
