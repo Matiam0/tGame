@@ -76,7 +76,18 @@ def scs(sheet):
         print(key, ':', value)
 
 # character sheet edit/stat edit.
-def sedit(name, points, stat1t, stat2t, stat3t, stat1, stat2, stat3):
+def sedit(sheet):
+    name = sheet.get('Name')
+    stat1t = sheet.item(stat1t)
+    stat1 = sheet.item(stat1)
+    stat2t = sheet.item(stat2t)
+    stat2 = sheet.item(stat2)
+    stat3t = sheet.item(stat3t)
+    stat3 = sheet.item(stat3)
+    points = sheet.get('Points')
+    level = sheet.item(level)
+    exp = sheet.get('Exp')
+    gender = sheet.get('Gender')
     while points > 0:
         clear()
         print(f"Hello you have {points} points  remaining.")
@@ -99,7 +110,7 @@ def sedit(name, points, stat1t, stat2t, stat3t, stat1, stat2, stat3):
             spent = 0
         else:
             pass
-    sheet = {'Name': name, stat1t: stat1, stat2t: stat2, stat3t: stat3}
+    sheet = {'Name': name, "Gender": gender, "Level": level, 'EXP' : exp, 'Points': points, stat1t: stat1, stat2t: stat2, stat3t: stat3}
     return sheet
 
 def ccreate():
@@ -122,6 +133,8 @@ def ccreate():
     stat3t = "DEX"
     stat3 = 3
     level = 1
+    exp = 0
+    points = 0
     #  currently random gender, may make it a choice?
     roll = dice(2)
     if roll == 1:
@@ -130,5 +143,11 @@ def ccreate():
         gender = "Female"
     print(f"You were born a {gender}.")
     name = input("What is your name? ")
-    sheet = {'Name': name, "Gender": gender, "Level": level, stat1t: stat1, stat2t: stat2, stat3t: stat3}
+    sheet = {'Name': name, "Gender": gender, "Level": level, 'EXP' : exp, 'Points': points, stat1t: stat1, stat2t: stat2, stat3t: stat3}
     return sheet
+
+def unpackssheet():
+    print()
+
+def packsheet():
+    print()
