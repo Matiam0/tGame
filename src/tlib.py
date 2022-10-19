@@ -11,3 +11,5 @@ def clear():
 def sleep(n):
     from time import sleep
     sleep(n)
+
+#RPG def below here
