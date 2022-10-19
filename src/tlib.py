@@ -12,4 +12,10 @@ def sleep(n):
     from time import sleep
     sleep(n)
 
-#RPG def below here
+# RPG def below here
+ # print from file
+def pff(file, line):
+    lineout = file,line
+    print(lineout)
+
+ # 
