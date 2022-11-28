@@ -13,9 +13,14 @@ def sleep(n):
     sleep(n)
 
 # RPG def below here
- # print from file
+## print from file
 def pff(file, line):
     lineout = file,line
     print(lineout)
 
- # 
+# title
+def title(version):
+    print(f"TGame [Dev] {version}")
+    print("_______________________")
+    print(" ")
+    print(" ")
