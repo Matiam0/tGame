@@ -13,10 +13,13 @@ def sleep(n):
     sleep(n)
 
 # RPG def below here
-## print from file
-def pff(file, line):
-    lineout = file,line
-    print(lineout)
+## print from json
+def pfjson(file, key):
+    import json
+    with open(file) as json_file:
+        data = json.load(json_file)
+        out = data.keys()
+        return out
 
 # title
 def title(version):

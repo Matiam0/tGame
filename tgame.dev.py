@@ -1,14 +1,14 @@
 from src import tlib as t
-
+import json
 
 def main():
     version = "0.1"
-    #credits/opening text from file.
-    t.pff('lib/intro.json', 1) #expand on this function later**
+    #Credits/opening text from file.
+    t.pfjson("lib\intro.json", 'opening') #Still needs fixed. Probably need a refresher
     t.sleep(2)
     
-    #character creation
-    #Get gender
+    #Character Creation
+    #Gender.
     hold = 1
     while hold == 1:
         t.clear()
@@ -22,14 +22,15 @@ def main():
         t.clear()
         t.title(version)
     
-    #Get age?
+    #Age. Come back later to decide how to handle non-integer values.
     hold = 1
     while hold == 1:
         t.clear()
         t.title(version)
-        age = input("How old are you?")
+        age = int(input("How old are you? : "))
         if age != 0:
-            hold = 0
+            if age >= 0:
+                hold = 0
         else:
             hold = 1
     else:
