@@ -1,23 +1,31 @@
 from src import tlib as t
-
-GameTitle = "tGame [Dev]"
+# Easy to edit Game; Version, Title. While Adding in Hooks for Json Text Libraries.
 GameVersion = "0.1"
+GameTitle = {"line1":f"tGame [Dev] {GameVersion}","line2":"_______________________","line3":""}
 IntroJson = "lib\intro.json"
+CreditsJson = "lib\Credits.json"
 
-def main(GameTitle, GameVersion, IntroJson):
+def main(GameTitle, IntroJson, CreditsJson):
     t.clear()
-    t.title(GameTitle, GameVersion)
-    #Credits/opening text from file.
-    GameOpening = t.fromJson(IntroJson, 'opening')
+    t.title(GameTitle)
+#Credits/opening text from file.
+# This is an example of t.fromJsonKey() using a key to get the value.
+    GameOpening = t.fromJsonKey(IntroJson, 'opening')
     print(GameOpening)
-    t.sleep(2)
+
+# This is an example of t.fromJson(), t.printDic(), t.printKey(), & t.printVal().
+#    TestJson = t.fromJson(IntroJson)
+#    t.printDic(TestJson)
+#    t.printKey(TestJson)
+#    t.printVal(TestJson)
+#    t.sleep(4)
     
-    #Character Creation
-    #Gender.
+#ToDo:Character Creation
+##Gender
     hold = 1
     while hold == 1:
         t.clear()
-        t.title(GameTitle, GameVersion)
+        t.title(GameTitle)
         gender = str(input("Are you male or female? : ")).lower()
         if gender == "male" or gender == "female":
             hold = 0
@@ -25,13 +33,14 @@ def main(GameTitle, GameVersion, IntroJson):
             hold = 1
     else:
         t.clear()
-        t.title(GameTitle, GameVersion)
     
-    #Age. Come back later to decide how to handle non-integer values.
+##Age
+##!Come back later to decide how to handle non-integer values.
+##?Hold loops while useful can be messy, maybe look at a try loop.
     hold = 1
     while hold == 1:
         t.clear()
-        t.title(GameTitle, GameVersion)
+        t.title(GameTitle)
         age = int(input("How old are you? : "))
         if age != 0:
             if age >= 0:
@@ -40,14 +49,17 @@ def main(GameTitle, GameVersion, IntroJson):
             hold = 1
     else:
         t.clear()
-        t.title(GameTitle, GameVersion)
-    #Get race?
+        t.title(GameTitle)
+##ToDo: Race selection.
     
-    #Get stats
+##Todo: Generate initial stats, distribute starting points.
     
-    #Print/Make sheet!
+##ToDo: Make dictionary called sheet to hold stats age, name, and race.
 
+##ToDo: XP/Level system.
+
+    t.clear()
         
         
 
-main(GameTitle, GameVersion, IntroJson)
+main(GameTitle, IntroJson, CreditsJson)

@@ -13,17 +13,44 @@ def sleep(n):
     sleep(n)
 
 # RPG def below here
-## print from json
-def fromJson(File, Key):
+
+##Json management functions
+
+### print from json by keyword argument.
+def fromJsonKey(File, Key):
     import json
     with open(File,"r") as JsonFile:
         JsonFile = json.load(JsonFile)
         Out = JsonFile.get(Key)
         return Out
 
-# title
-def title(GameTitle, GameVersion):
-    print(f"{GameTitle} {GameVersion}")
-    print("_______________________")
-    print(" ")
-    print(" ")
+### Create Dictionary from Json.
+def fromJson(File):
+    import json
+    OpenFile = open(File, "r")
+    JsonFile = json.load(OpenFile)
+    return JsonFile
+
+
+
+## Dictionary functions
+
+### Print title from dictionary
+def title(GameTitleDictionary):
+    for values in GameTitleDictionary.values():
+        print(values)
+
+### Print |"{key} : {value}"| from dictionary.
+def printDic(Dic):
+    for k, v in Dic.items():
+        print(f"{k} : {v}")
+
+### Print values from dictionary.
+def printVal(Dic):
+    for v in Dic.values():
+        print(v)
+
+### Print keys from dictionary.
+def printKey(Dic):
+    for k in Dic.keys():
+        print(k)
