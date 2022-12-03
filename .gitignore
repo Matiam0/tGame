@@ -1,1 +1,3 @@
-TGame.code-workspace
+*.code-workspace
+**/.vscode
+**/__pycache__
