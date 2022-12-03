@@ -8,7 +8,7 @@ def clear():
         os.system('cls')
 
 # define sleep as an easy to call function
-def sleep(n):
+def wait(n):
     from time import sleep
     sleep(n)
 
@@ -34,11 +34,6 @@ def fromJson(File):
 
 
 ## Dictionary functions
-
-### Print title from dictionary
-def title(GameTitleDictionary):
-    for values in GameTitleDictionary.values():
-        print(values)
 
 ### Print |"{key} : {value}"| from dictionary.
 def printDic(Dic):
