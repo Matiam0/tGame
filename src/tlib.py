@@ -14,16 +14,16 @@ def sleep(n):
 
 # RPG def below here
 ## print from json
-def pfjson(file, key):
+def fromJson(File, Key):
     import json
-    with open(file) as json_file:
-        data = json.load(json_file)
-        out = data.keys()
-        return out
+    with open(File,"r") as JsonFile:
+        JsonFile = json.load(JsonFile)
+        Out = JsonFile.get(Key)
+        return Out
 
 # title
-def title(version):
-    print(f"TGame [Dev] {version}")
+def title(GameTitle, GameVersion):
+    print(f"{GameTitle} {GameVersion}")
     print("_______________________")
     print(" ")
     print(" ")

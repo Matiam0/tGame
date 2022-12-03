@@ -1,9 +1,15 @@
 from src import tlib as t
 
-def main():
-    version = "0.1"
+GameTitle = "tGame [Dev]"
+GameVersion = "0.1"
+IntroJson = "lib\intro.json"
+
+def main(GameTitle, GameVersion, IntroJson):
+    t.clear()
+    t.title(GameTitle, GameVersion)
     #Credits/opening text from file.
-    t.pfjson("lib\intro.json", 'opening') #Still needs fixed. Probably need a refresher
+    GameOpening = t.fromJson(IntroJson, 'opening')
+    print(GameOpening)
     t.sleep(2)
     
     #Character Creation
@@ -11,7 +17,7 @@ def main():
     hold = 1
     while hold == 1:
         t.clear()
-        t.title(version)
+        t.title(GameTitle, GameVersion)
         gender = str(input("Are you male or female? : ")).lower()
         if gender == "male" or gender == "female":
             hold = 0
@@ -19,13 +25,13 @@ def main():
             hold = 1
     else:
         t.clear()
-        t.title(version)
+        t.title(GameTitle, GameVersion)
     
     #Age. Come back later to decide how to handle non-integer values.
     hold = 1
     while hold == 1:
         t.clear()
-        t.title(version)
+        t.title(GameTitle, GameVersion)
         age = int(input("How old are you? : "))
         if age != 0:
             if age >= 0:
@@ -34,7 +40,7 @@ def main():
             hold = 1
     else:
         t.clear()
-        t.title(version)
+        t.title(GameTitle, GameVersion)
     #Get race?
     
     #Get stats
@@ -44,4 +50,4 @@ def main():
         
         
 
-main()
+main(GameTitle, GameVersion, IntroJson)
