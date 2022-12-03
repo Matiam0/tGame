@@ -90,6 +90,7 @@ def main(GameTitle, IntroJson, CreditsJson):
     print(GameCredits1)
     t.wait(WaitMedium)
 #Finale screen clear.
+    t.wait(WaitLong)
     t.clear()
         
 
