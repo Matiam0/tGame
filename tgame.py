@@ -1,4 +1,4 @@
-from src import tlib as t
+from lib import tlib as t
 # Easy to edit Game; Version, Title. While Adding in Hooks for Json Text Libraries.
 GameVersion = "0.1.12"
 GameTitle = {"line1":f"tGame [Dev] {GameVersion}","line2":"_______________________","line3":""}
