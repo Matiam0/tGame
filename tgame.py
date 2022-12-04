@@ -3,7 +3,7 @@ from src import tlib as t
 GameVersion = "0.1.12"
 GameTitle = {"line1":f"tGame [Dev] {GameVersion}","line2":"_______________________","line3":""}
 IntroJson = "lib\intro.json"
-CreditsJson = "lib\Credits.json"
+CreditsJson = "lib\credits.json"
 
 def main(GameTitle, IntroJson, CreditsJson):
 #Assigning Wait Values for ease of access.
