@@ -49,3 +49,10 @@ def printVal(Dic):
 def printKey(Dic):
     for k in Dic.keys():
         print(k)
+
+# This is an example of t.fromJson(), t.printDic(), t.printKey(), & t.printVal().
+#    TestJson = t.fromJson(IntroJson)
+#    t.printDic(TestJson)
+#    t.printKey(TestJson.get('1')) # for if you have nested dictionary items ex {"yep":{"1":"What I want to print!"}}
+#    t.printVal(TestJson)
+#    t.sleep(4)
