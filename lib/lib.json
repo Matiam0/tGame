@@ -1,12 +1,12 @@
 {
-    "version":"0.1.13",
+    "version":"0.1.14",
     "gamestate":"dev",
     "intro":{
         "1":"Such story!",
         "2":"Anyone paying attention?",
         "3":"Barely passing out.",
         "4":"Credits please!",
-        "5":"Dreadfully blank.",
+        "5":"Dreadfully bland.",
         "6":"Efficient use of skill [Bore]",
         "7":"Fast asleep."
     },
@@ -14,9 +14,11 @@
         "1":"Story"
     },
     "races":{
-        "1":"Human",
-        "2":"Ghostbuster",
-        "3":"Zombellina"
+        "1":"Turtle",
+        "2":"Ghostbaster",
+        "3":"Zombrella",
+        "4":"Centipedal Dolphin",
+        "5":"Halvodr"
     },
     "credits":{
         "1":"Nope.",
