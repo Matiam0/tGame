@@ -1,4 +1,5 @@
 {
+    "gameName":"tGame",
     "version":"0.1.14",
     "gamestate":"dev",
     "intro":{
@@ -17,8 +18,9 @@
         "1":"Turtle",
         "2":"Ghostbaster",
         "3":"Zombrella",
-        "4":"Centipedal Dolphin",
-        "5":"Halvodr"
+        "4":"Centilphin",
+        "5":"Halvodr",
+        "6":"Lucaria"
     },
     "credits":{
         "1":"Nope.",

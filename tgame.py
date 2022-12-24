@@ -1,7 +1,7 @@
 from lib import tlib as t
 # Easy to edit Game; Version, Title. While Adding in Hooks for Json Text Libraries.
 LibJson = "lib\lib.json"
-name="pc"
+name="Trollolol Johnson"
 gender="male"
 age="19"
 
@@ -18,7 +18,7 @@ def main(LibJson):
     t.clear()
     t.title()
     #Credits/opening text from file.
-    GameOpening = t.fromJsonKey(LibJson, 'intro')
+    GameOpening = t.fromJson(LibJson).get('intro')
     print(GameOpening.get('1'))
     t.wait(WaitShort)
     print(GameOpening.get('2'))
@@ -65,27 +65,28 @@ def main(LibJson):
             t.title()
             age = int(input("How old are you? : "))
             if age != 0:
-                if age >= 0:
+                if age >= 9 or age <= 60:
                     hold = 0
             else:
+                print("Try a number between 9 and 60!")
+                t.wait(WaitShort)
                 hold = 1
         except ValueError:
-            print("Try a number!")
+            print("Try a number between 9 and 60!")
             t.wait(WaitShort)
         else:
             t.clear()
-            t.printVal()
 
-    ##ToDo: Race selection.
-    races = t.fromJsonKey(LibJson, 'races')
+    ##Race selection.
+    races = t.fromJson(LibJson).get('races')
     hold = 1
     while hold == 1:
         try:
             t.clear()
             t.title()
-            print(f"{races.get('1')}, {races.get('2')}, {races.get('3')}, {races.get('4')}, or {races.get('5')}")
-            race = input(f"Select a race from the above. ")
-            if race != races.get('1') or races.get('2') or races.get('3') or race.get('4') or race.get('5'):
+            print(f"{races.get('1')}, {races.get('2')}, {races.get('3')}, {races.get('4')}, {races.get('5')}, or {races.get('6')}")
+            race = input(f"Select a race from the above: ")
+            if race != races.get('1') or races.get('2') or races.get('3') or races.get('4') or races.get('5') or races.get('6'):
                 hold = 1
             else:
                 hold = 0
@@ -99,18 +100,21 @@ def main(LibJson):
         else:
             t.clear()
             t.title()
+            race = race.title()
+            break
             
     ##Todo: Generate initial stats, distribute starting points.
     
     ##ToDo: Make dictionary called sheet to hold stats age, name, and race.
 
     ##ToDo: XP/Level system.
+    
+    ##ToDo: Get Name!
 
     t.clear()
     ## Credits
-    t.printVal()
-    print(name, gender, age, race)
-    GameCredits = t.fromJsonKey(LibJson, 'credits')
+    print(f"{name}, {gender}, {age}, {race}")
+    GameCredits = t.fromJson(LibJson).get('credits')
     print(GameCredits.get('1'))
     t.wait(WaitShort)
     print(GameCredits.get('2'))

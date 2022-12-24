@@ -1,3 +1,4 @@
+
 #!Read Me
 
 #This library requires the following files
@@ -27,56 +28,22 @@ def wait(n):
 ##Game functions
 def title():
     LibJson = "lib\lib.json"
-    GameVersion = fromJsonKey(LibJson,'version')
-    GameState = fromJsonKey(LibJson,'gamestate')
+    GameName =  fromJson(LibJson).get('gameName')
+    GameState = fromJson(LibJson).get('gamestate')
+    GameVersion = fromJson(LibJson).get('version')
     if GameState == "dev":
-        Dic = {"line1":f"tGame [Dev] {GameVersion}","line2":"_______________________","line3":""}
+        Dic = {"line1":f"{GameName} [Dev] {GameVersion}","line2":"_______________________","line3":""}
     elif GameState == "troll":
-        Dic = {"line1":f"tGame [Troll] {GameVersion}","line2":"_______________________","line3":""}
+        Dic = {"line1":f"{GameName} [Troll] {GameVersion}","line2":"_______________________","line3":""}
     else:
-        Dic = {"line1":f"tGame {GameVersion}","line2":"_______________________","line3":""}
+        Dic = {"line1":f"{GameName} {GameVersion}","line2":"_______________________","line3":""}
     for v in Dic.values():
         print(v)
 
 ##Json management functions
-
-### print from json by keyword argument.
-def fromJsonKey(File, Key):
-    import json
-    with open(File,"r") as JsonFile:
-        JsonFile = json.load(JsonFile)
-        Out = JsonFile.get(Key)
-        return Out
-
 ### Create Dictionary from Json.
 def fromJson(File):
     import json
     OpenFile = open(File, "r")
     JsonFile = json.load(OpenFile)
     return JsonFile
-
-
-
-## Dictionary functions
-
-### Print |"{key} : {value}"| from dictionary.
-def printDic(Dic):
-    for k, v in Dic.items():
-        print(f"{k} : {v}")
-
-### Print values from dictionary.
-def printVal(Dic):
-    for v in Dic.values():
-        print(v)
-
-### Print keys from dictionary.
-def printKey(Dic):
-    for k in Dic.keys():
-        print(k)
-
-# This is an example of t.fromJson(), t.printDic(), t.printKey(), & t.printVal().
-#    TestJson = t.fromJson(IntroJson)
-#    t.printDic(TestJson)
-#    t.printKey(TestJson.get('1')) # for if you have nested dictionary items ex {"yep":{"1":"What I want to print!"}}
-#    t.printVal(TestJson)
-#    t.sleep(4)
