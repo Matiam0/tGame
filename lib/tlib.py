@@ -33,7 +33,7 @@ def title(Setting=0):
         print(v)
 
 #Main menu function
-def menu():
+def menu(save):
     check = True
     while check == True:
             print("New Game")
