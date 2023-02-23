@@ -1,19 +1,24 @@
 from lib import tlib as t
-# Easy to edit Game; Version, Title. While Adding in Hooks for Json Text Libraries.
+#Pre-Game Setup/Variable sets.
+#set LibJson location.
 LibJson = "lib\lib.json"
+#set character defaults.
 name="Trollolol Johnson"
 gender="male"
 age="19"
-
+#pull the game values from LibJson.
+gameName =  t.fromJson(LibJson).get('gameName')
+gameState = t.fromJson(LibJson).get('gamestate')
+gameVersion = t.fromJson(LibJson).get('version')
+#Assigning Wait Values for ease of access.
+WaitShort = 1
+WaitMedium = 5
+WaitMild = 10
+WaitLong = 20
 
 def main(LibJson):
     #ToDo: Make main menu
-
-    #Assigning Wait Values for ease of access.
-    WaitShort = 1
-    WaitMedium = 5
-    WaitMild = 10
-    WaitLong = 20
+    t.menu(LibJson)
     #Clear screen to be sure, then use printVal for GameTitle and Version.
     t.clear()
     t.title()
