@@ -1,3 +1,14 @@
+
+#!Read Me
+
+#This library requires the following files
+##A "lib\lib.json" with the version and gamestate key:variable pairs.
+##If you want the above to not be required you can comment out the def title, ... lines.
+
+
+
+
+
 # Use for System type commands that can be used in the lib later.
 # define easy to use clear screen that works on multiple os
 def clear():
@@ -14,38 +25,28 @@ def wait(n):
 
 # RPG def below here
 
+##Game functions
+def title(Setting=0):
+    LibJson = "lib\lib.json"
+    Dic = fromJson(LibJson).get('Title')
+    for v in Dic.values():
+        print(v)
+
+#Main menu function
+def menu(save):
+    check = True
+    while check == True:
+            print("New Game")
+            if save == True:
+                print("Load")
+            print("Settings")
+            print("Quit")
+            option = input('Select: ')
+
 ##Json management functions
-
-### print from json by keyword argument.
-def fromJsonKey(File, Key):
-    import json
-    with open(File,"r") as JsonFile:
-        JsonFile = json.load(JsonFile)
-        Out = JsonFile.get(Key)
-        return Out
-
 ### Create Dictionary from Json.
 def fromJson(File):
     import json
     OpenFile = open(File, "r")
     JsonFile = json.load(OpenFile)
     return JsonFile
-
-
-
-## Dictionary functions
-
-### Print |"{key} : {value}"| from dictionary.
-def printDic(Dic):
-    for k, v in Dic.items():
-        print(f"{k} : {v}")
-
-### Print values from dictionary.
-def printVal(Dic):
-    for v in Dic.values():
-        print(v)
-
-### Print keys from dictionary.
-def printKey(Dic):
-    for k in Dic.keys():
-        print(k)
