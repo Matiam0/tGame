@@ -1,24 +1,25 @@
 from lib import tlib as t
 #Pre-Game Setup/Variable sets.
 #set LibJson location.
-LibJson = "lib\lib.json"
+LibJson = 'TGame\lib\lib.json'
 #set character defaults.
 name="Trollolol Johnson"
 gender="male"
 age="19"
 #pull the game values from LibJson.
 gameName =  t.fromJson(LibJson).get('gameName')
-gameState = t.fromJson(LibJson).get('gamestate')
+gameState = t.fromJson(LibJson).get('gameState')
 gameVersion = t.fromJson(LibJson).get('version')
 #Assigning Wait Values for ease of access.
 WaitShort = 1
 WaitMedium = 5
 WaitMild = 10
 WaitLong = 20
+save = {'0': 'False'}
 
-def main(LibJson):
+def main(save):
     #ToDo: Make main menu
-    t.menu(LibJson)
+    t.menu()
     #Clear screen to be sure, then use printVal for GameTitle and Version.
     t.clear()
     t.title()

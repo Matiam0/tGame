@@ -36,11 +36,13 @@ def title(Setting=0):
 def menu(save):
     check = True
     while check == True:
-            print("New Game")
+            print("_____________")
+            print("| New Game")
             if save == True:
-                print("Load")
-            print("Settings")
-            print("Quit")
+                print("| Load")
+            print("| Settings")
+            print("| Quit")
+            print("\__________")
             option = input('Select: ')
 
 ##Json management functions

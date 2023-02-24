@@ -1,7 +1,7 @@
 {
     "gameName":"tGame",
     "version":"0.1.14",
-    "gamestate":"dev",
+    "gameState":"dev",
     "title": {
         "line1":"________________________________________________________________",
         "line2":"|                  tGame v0.1.14 [dev]                         |",
