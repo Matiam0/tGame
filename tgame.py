@@ -1,7 +1,7 @@
 from lib import tlib as t
 #Pre-Game Setup/Variable sets.
 #set LibJson location.
-LibJson = 'TGame\lib\lib.json'
+LibJson = "lib\lib.json"
 #set character defaults.
 name="Trollolol Johnson"
 gender="male"
@@ -19,7 +19,7 @@ save = {'0': 'False'}
 
 def main(save):
     #ToDo: Make main menu
-    t.menu()
+    t.menu(save)
     #Clear screen to be sure, then use printVal for GameTitle and Version.
     t.clear()
     t.title()

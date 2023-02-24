@@ -36,6 +36,7 @@ def title(Setting=0):
 def menu(save):
     check = True
     while check == True:
+            clear()
             print("_____________")
             print("| New Game")
             if save == True:
