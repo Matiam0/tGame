@@ -26,25 +26,11 @@ def wait(n):
 # RPG def below here
 
 ##Game functions
-def title(Setting=0):
-    LibJson = "lib\lib.json"
-    Dic = fromJson(LibJson).get('Title')
-    for v in Dic.values():
-        print(v)
+def jsonValue(menu):
+    for v in menu.values():
+            print(v)
 
-#Main menu function
-def menu(save):
-    check = True
-    while check == True:
-            clear()
-            print("_____________")
-            print("| New Game")
-            if save == True:
-                print("| Load")
-            print("| Settings")
-            print("| Quit")
-            print("\__________")
-            option = input('Select: ')
+    
 
 ##Json management functions
 ### Create Dictionary from Json.

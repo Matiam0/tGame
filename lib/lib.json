@@ -2,6 +2,14 @@
     "gameName":"tGame",
     "version":"0.1.14",
     "gameState":"dev",
+    "menuMain":{
+        "line1": "_____________",
+        "line2": "| New Game  |",
+        "line3": "| Load      |",
+        "line4": "| Settings  |",
+        "line5": "| Quit      |",
+        "line6": "\\___________|"
+    },
     "title": {
         "line1":"________________________________________________________________",
         "line2":"|                  tGame v0.1.14 [dev]                         |",
