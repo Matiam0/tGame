@@ -1,3 +1,5 @@
+from random import randint
+
 class game():
     def rollDice(sides):
         roll = randint(1, sides)
