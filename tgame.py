@@ -1,6 +1,6 @@
 from random import randint
 
-class game():
+class tGame():
     def rollDice(sides):
         roll = randint(1, sides) # type: ignore
         return roll
