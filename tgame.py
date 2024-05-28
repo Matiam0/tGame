@@ -1,41 +1,51 @@
 
-##!Import above this line.
-##!Text Formatting options go in this class.
-class format():
+import os
 
-    def color(text,color): ##Todo Add support for 16 colors
+os.system('color')
+# !Import above this line.
+
+# !Section for default variables
+screenWidth = 100
+
+
+class fmt():  # !Text Formatting options go in this class.
+
+    def ansi(code="0;37;40m"):
+        Out = "\033[" + code
+        return Out
+
+
+class cs():  # !CharacterSheet functions go in this class.
+
+    def create():  # Todo Character creation will go here.
         print()
 
-    def font(text,font): ##Todo Add support for at least two fonts.
+    def edit():  # Todo Edit characters, aka use skill points and change stats.
         print()
 
-    def align(text,alignment): ##Todo Add Left, Center, and Right alignment options.
-        print()
-
-##!Character functions go in this class.
-class character():
-
-    def create(): ##Todo Character creation will go here, may opt to merge this with edit into a sub-class later.
-        print()
-
-    def edit(): ##Todo Edit characters, aka use skill points and change stats.
-        print()
-
-    def save(): ##Todo Make basic Save/Load for characters.
+    def save():  # Todo Make basic Save/Load for characters.
         print()
 
     def load():
         print()
 
-##! Anything not falling into the above classes will go here as game functions.
+# !Anything not falling into the above classes will go here as game functions.
+
+
 class game():
 
-    def dice(): ##Todo Roll a dice with x number of sides and return the number.
+    # Todo Roll a dice with x number of sides and return the number.
+    def dice(number):
+        print()
+
+    def settings(setting, id):
         print()
 
 
 def main():
-    print()
+    print(fmt.ansi("1;35;40m") + "|" + "Test".center(screenWidth,"-") + "|" + fmt.ansi())
+    print("|" + fmt.ansi("3m") + "Yes".ljust(screenWidth) + fmt.ansi() + "|")
+    print("|" + fmt.ansi("3m") + "No".ljust(screenWidth) + fmt.ansi() + "|")
 
 
 main()
