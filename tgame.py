@@ -8,14 +8,14 @@ os.system('color')
 screenWidth = 100
 
 
-class fmt():  # !Text Formatting options go in this class.
+class format():  # !Text Formatting options go in this class.
 
     def ansi(code="0;37;40m"):
         Out = "\033[" + code
         return Out
 
 
-class cs():  # !CharacterSheet functions go in this class.
+class character():  # !CharacterSheet functions go in this class.
 
     def create():  # Todo Character creation will go here.
         print()
@@ -43,9 +43,21 @@ class game():
 
 
 def main():
-    print(fmt.ansi("1;35;40m") + "|" + "Test".center(screenWidth,"-") + "|" + fmt.ansi())
-    print("|" + fmt.ansi("3m") + "Yes".ljust(screenWidth) + fmt.ansi() + "|")
-    print("|" + fmt.ansi("3m") + "No".ljust(screenWidth) + fmt.ansi() + "|")
+    print(
+            format.ansi("1;35;40m") + "|" +
+            "Test".center(screenWidth, "-") + "|" +
+            format.ansi()
+        )
+    print(
+            "|" + format.ansi("3m") +
+            "Yes".ljust(screenWidth) +
+            format.ansi() + "|"
+        )
+    print(
+            "|" + format.ansi("3m") +
+            "No".ljust(screenWidth) +
+            format.ansi() + "|"
+        )
 
 
 main()
