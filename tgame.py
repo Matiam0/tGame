@@ -1,4 +1,6 @@
 
+import json
+import colorama # type: ignore
 import os
 
 os.system('color')
@@ -10,8 +12,8 @@ screenWidth = 100
 
 class format():  # !Text Formatting options go in this class.
 
-    def ansi(code="0;37;40m"):
-        Out = "\033[" + code
+    def ansi(code="0;37;40"):
+        Out = "\033[" + code + "m"
         return Out
 
 
