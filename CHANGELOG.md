@@ -13,3 +13,8 @@
 +  fTitle()
 +  cJustify()
 +  rJustify()
+
+## v0.0.1a - 1
+$ Class tFormat -> format
+$  sub-class ansi() low-levels working for manual ansi control/input
+$ Class game next
