@@ -1,7 +1,7 @@
 
+import os
 import json
 import colorama
-import os
 
 os.system('color')
 # !Import above this line.
