@@ -1,19 +1,20 @@
 
 import json
-import colorama # type: ignore
+import colorama
 import os
 
 os.system('color')
 # !Import above this line.
 
 # !Section for default variables
-screenWidth = 100
-
+defaultSettings = {
+    'screenWidth': 100
+}
 
 class format():  # !Text Formatting options go in this class.
 
-    def ansi(code="0;37;40"):
-        Out = "\033[" + code + "m"
+    def ansi(code="0;37;40m"):
+        Out = "\033[" + code
         return Out
 
 
@@ -45,21 +46,7 @@ class game():
 
 
 def main():
-    print(
-            format.ansi("1;35;40m") + "|" +
-            "Test".center(screenWidth, "-") + "|" +
-            format.ansi()
-        )
-    print(
-            "|" + format.ansi("3m") +
-            "Yes".ljust(screenWidth) +
-            format.ansi() + "|"
-        )
-    print(
-            "|" + format.ansi("3m") +
-            "No".ljust(screenWidth) +
-            format.ansi() + "|"
-        )
+    print()
 
 
 main()
