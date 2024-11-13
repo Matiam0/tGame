@@ -11,14 +11,15 @@ defaultSettings = {
     'screenWidth': 100
 }
 
-class format():  # !Text Formatting options go in this class.
+# !Text Formatting options go in this class.
+class format(): 
 
     def ansi(code="0;37;40m"):
         Out = "\033[" + code
         return Out
 
-
-class character():  # !CharacterSheet functions go in this class.
+# !Character functions go in this class.
+class character(): 
 
     def create():  # Todo Character creation will go here.
         print()
@@ -32,9 +33,8 @@ class character():  # !CharacterSheet functions go in this class.
     def load():
         print()
 
+
 # !Anything not falling into the above classes will go here as game functions.
-
-
 class game():
 
     # Todo Roll a dice with x number of sides and return the number.

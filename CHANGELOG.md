@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.0.1a - 2
+/ Rework & planning phase.
+
+## v0.0.1a - 1
++ Class tFormat -> format
++  sub-class ansi() low-levels working for manual ansi control/input
+
 ## v0.0.1
 
 + Reset Versioning.
@@ -13,8 +20,3 @@
 +  fTitle()
 +  cJustify()
 +  rJustify()
-
-## v0.0.1a - 1
-$ Class tFormat -> format
-$  sub-class ansi() low-levels working for manual ansi control/input
-$ Class game next
